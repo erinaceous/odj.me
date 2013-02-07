@@ -1,0 +1,113 @@
+@import url('reset.css');
+
+html {
+    display: table;
+    vertical-align: middle;
+    margin: 0 auto;
+    height: 100%;
+}
+
+body {
+    background: #700 url('woodbg.jpg') repeat center;
+    display: table-cell;
+    vertical-align: middle;
+    font-family: "Trebuchet MS", sans-serif; /* TODO: Better fonts! */
+    font-size: 14pt;
+    max-width: 1152px;
+}
+
+.container {
+    background: transparent url('fold-48px.png') no-repeat top left;
+    min-width: 320px;
+    padding: 48px 0px 0px 0px;
+    box-shadow: .2em .2em .25em;
+    margin: 0px 0px;
+    width: auto;
+    max-width: 720px;
+    display: inline-block;
+    z-index: 10;
+}
+
+.container:nth-of-type(even) {
+    transform: rotate(5deg) scale(0.75,0.75);
+    -webkit-transform: rotate(5deg) scale(0.75,0.75);
+    margin-left: 2em;
+    transition: all 1s ease-in-out;
+    -webkit-transition: all 0.5s ease-out;
+}
+
+.container:nth-of-type(odd) {
+    transform: rotate(-5deg) scale(0.75, 0.75);
+    -webkit-transform: rotate(-5deg) scale(0.75,0.75);
+    margin-right: 2em;
+    transition: all 1s ease-in-out;
+    -webkit-transition: all 0.25s ease-out
+}
+
+.container:hover {
+    transform: none;
+    -webkit-transform: none;
+    box-shadow: .8em .8em 1em;
+    z-index: 20;
+}
+
+.content {
+    background: #dfdfdf url('linedpaper.png') repeat top left;
+    padding: 1em;
+}
+
+.container .content.top {
+    padding: 0px;
+    margin: -48px 0px 0px 48px;
+    height: 48px;
+}
+
+h1 {
+    display: block;
+    font-size: 150%;
+    border-bottom: 1px solid #bdbdbd;
+    margin: .25em inherit;
+}
+
+.container .content.top div {
+    color: #333;
+    text-align: right;
+    padding: .5em;
+    max-height: 48px;
+    font-variant: small-caps;
+    font-size: 130%;
+}
+
+ul.links li {
+    display: block;
+    margin-bottom: .3em;
+    clear: both;
+}
+
+ul.links li > * {
+    float: left;
+}
+
+ul.links li a {
+    float: right;    
+}
+
+a {
+    color: #700;
+    text-decoration: none;
+    border-bottom: 1px dotted #3f0000;
+    border-collapse: inline;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+}
+
+a:hover {
+    color: #f00;
+    border-color: #f00;
+    text-shadow: 0px 0px 3px #f90;
+}
+
+p {
+    margin: .8em inherit;
+    line-height: 1.2em;
+}
