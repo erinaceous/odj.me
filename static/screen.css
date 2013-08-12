@@ -1,113 +1,112 @@
 @import url('reset.css');
+@import url('//fonts.googleapis.com/css?family=Source+Code+Pro:400,700');
 
-html {
-    display: table;
-    vertical-align: middle;
-    margin: 0 auto;
-    height: 100%;
-}
+/*html {
+    background: #111;
+}*/
 
 body {
-    background: #700 url('woodbg.jpg') repeat center;
-    display: table-cell;
-    vertical-align: middle;
-    font-family: "Trebuchet MS", sans-serif; /* TODO: Better fonts! */
-    font-size: 14pt;
-    max-width: 1152px;
-}
-
-.container {
-    background: transparent url('fold-48px.png') no-repeat top left;
-    min-width: 320px;
-    padding: 48px 0px 0px 0px;
-    box-shadow: .2em .2em .25em;
-    margin: 0px 0px;
-    width: auto;
-    max-width: 720px;
-    display: inline-block;
-    z-index: 10;
-}
-
-.container:nth-of-type(even) {
-    transform: rotate(5deg) scale(0.75,0.75);
-    -webkit-transform: rotate(5deg) scale(0.75,0.75);
-    margin-left: 2em;
-    transition: all 1s ease-in-out;
-    -webkit-transition: all 0.5s ease-out;
-}
-
-.container:nth-of-type(odd) {
-    transform: rotate(-5deg) scale(0.75, 0.75);
-    -webkit-transform: rotate(-5deg) scale(0.75,0.75);
-    margin-right: 2em;
-    transition: all 1s ease-in-out;
-    -webkit-transition: all 0.25s ease-out
-}
-
-.container:hover {
-    transform: none;
-    -webkit-transform: none;
-    box-shadow: .8em .8em 1em;
-    z-index: 20;
-}
-
-.content {
-    background: #dfdfdf url('linedpaper.png') repeat top left;
+    font-family: "Source Code Pro", monospace;
+    background: black;
+    color: #ccc;
+    font-size: 12pt;
+    margin: 1em auto;
     padding: 1em;
+    width: 50em; /* 50em == 80 characters wide apparently... what ???????? */
+/*    border: 0.1em solid #222;
+    line-height: 1.2em;
+    -webkit-box-shadow: 0px 0px 7px #000;
+    -moz-box-shadow: 0px 0px 7px #000;
+    -ms-box-shadow: 0px 0px 7px #000;
+    -o-box-shadow: 0px 0px 7px #000;
+    box-shadow: 0px 0px 7px #000;*/
+    min-height: 22em;
+}
+body:hover {
+    border-color: #444;
+}
+body:after {
+    content: '.';
+    float: right;
+    margin-bottom: 1em;
 }
 
-.container .content.top {
-    padding: 0px;
-    margin: -48px 0px 0px 48px;
-    height: 48px;
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
-h1 {
-    display: block;
-    font-size: 150%;
-    border-bottom: 1px solid #bdbdbd;
-    margin: .25em inherit;
+@-webkit-keyframes blink {
+    50% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
-.container .content.top div {
-    color: #333;
-    text-align: right;
-    padding: .5em;
-    max-height: 48px;
-    font-variant: small-caps;
-    font-size: 130%;
+.blink, body:after {
+    -webkit-animation: blink 1s steps(60, start) infinite;
+    -moz-animation: blink 1s steps(60, start) infinite;
+    -ms-animation: blink 1s steps(60, start) infinite;
+    -o-animation: blink 1s steps(60, start) infinite;
+    animation: blink 1s steps(60, start) infinite;
 }
 
-ul.links li {
-    display: block;
-    margin-bottom: .3em;
-    clear: both;
+.cursor, body:after {
+    color: yellow;
+    background-color: yellow;
 }
 
-ul.links li > * {
-    float: left;
-}
+/* Solarized colours :D */
+.bg-15 { background-color: #002B36; }
+.bg-20 { background-color: #073642; }
+.bg-45 { background-color: #586E75; }
+.bg-50 { background-color: #657B83; }
+.bg-60 { background-color: #839496; }
+.bg-65 { background-color: #93A1A1; }
+.bg-92 { background-color: #EEE8D5; }
+.bg-97 { background-color: #FDF6E3; }
+.yellow { color: #B58900; }
+.orange { color: #CB4B16; }
+.red { color: #DC322F; }
+.magenta { color: #D33682; }
+.violet { color: #6C71C4; }
+.blue { color: #268BD2; }
+.cyan { color: #2AA198; }
+.green { color: #859900; }
 
-ul.links li a {
-    float: right;    
-}
-
+/*a:before { content: '\0000bb'; opacity: .5; }
+a:after { content: '\0000ab'; opacity: .5; }*/
+a:before { content: '['; opacity: .5; }
+a:after { content: ']'; opacity: .5; }
 a {
-    color: #700;
     text-decoration: none;
-    border-bottom: 1px dotted #3f0000;
-    border-collapse: inline;
-    transition: all 0.5s ease-in-out;
-    -webkit-transition: all 0.5s ease-in-out;
+    color: inherit;
+}
+a:hover {
+    color: #fff;
 }
 
-a:hover {
-    color: #f00;
-    border-color: #f00;
-    text-shadow: 0px 0px 3px #f90;
+.hr:before {
+    display: block;
+    clear: both;
+    margin: 1em 0px;
+    opacity: .5;
+    content: '--------------------------------------------------------------------------------';
 }
 
 p {
-    margin: .8em inherit;
-    line-height: 1.2em;
+    margin: 1em 0px;
+}
+
+strong {
+    font-weight: bold;
 }
