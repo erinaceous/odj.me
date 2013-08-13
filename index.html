@@ -5,9 +5,9 @@
         <link rel="stylesheet" href="static/screen.css" media="screen" />
     </head>
     <body>
-        <!-- <?php if($_SERVER['REQUEST_URI'] != '/') {
-            echo /* --> */ '<strong class="bg-15 magenta">TODO:</strong> Write '.$_SERVER['REQUEST_URI'];
-        /* <!-- */ } else { > -->
+        <?php if($_SERVER['REQUEST_URI'] != '/') {
+            echo urldecode('%3Cstrong%20class%3D%22bg-15%20magenta%22%3ETODO%3A%3C%2Fstrong%3E%20Write%20') . $_SERVER['REQUEST_URI'];
+        } else { ?>
         <p><strong class="green">root@<?php echo gethostbyaddr($_SERVER['REMOTE_ADDR']); ?>:/#</strong> cat /proc/owain/state</p>
         <strong class="yellow">Mister Owain Daniel Jones</strong><br />
         Computer Scientist, Programmer Of Stuff<br />
