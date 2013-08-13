@@ -12,7 +12,7 @@ body {
     font-size: 12pt;
     margin: 1em auto;
     padding: 1em;
-    width: 50em; /* 50em == 80 characters wide apparently... what ???????? */
+    width: 80ch;
 /*    border: 0.1em solid #222;
     line-height: 1.2em;
     -webkit-box-shadow: 0px 0px 7px #000;
