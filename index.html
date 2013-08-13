@@ -3,14 +3,42 @@
     <head>
         <title>Owain Daniel Jones</title>
         <link rel="stylesheet" href="static/screen.css" media="screen" />
+        <script type="text/javascript">
+            var ctrl = false;
+            function keys(e) {
+                e = e || window.event;
+                var keycode = e.charCode || e.keyCode;
+                if(keycode === 17) { //ctrl
+                    ctrl = true;
+                } else if(keycode === 67 && ctrl == true) { //c
+                    document.body.innerHTML += '^C ';
+                } else if(keycode === 90 && ctrl == true) { //z
+                    document.body.innerHTML += '^Z ';
+                }
+            }
+            window.onload = function() {
+                document.body.onkeydown = keys;
+                document.body.onkeyup = function(e) {
+                    e = e || window.event;
+                    var keycode = e.charCode || e.keyCode;
+                    if(keycode === 17 && ctrl == true) {
+                        ctrl = false;
+                    }
+                }
+            }
+        </script>
     </head>
     <body>
         <?php if($_SERVER['REQUEST_URI'] != '/') {
-            echo urldecode('%3Cstrong%20class%3D%22bg-15%20magenta%22%3ETODO%3A%3C%2Fstrong%3E%20Write%20')
+            echo urldecode('%3Cstrong%20class%3D%22bg-15%20magenta%22%3ETODO' .
+                           '%3A%3C%2Fstrong%3E%20Write%20')
                  . $_SERVER['REQUEST_URI']
-                 . urldecode('%3Cp%3E(HTTP%20404%2C%20File%20not%20found.%20Sorry!)%3C%2Fp%3E');
+                 . urldecode('%3Cp%3E(HTTP%20404%2C%20File%20not%20found.' .
+                             '%20Sorry!)%3C%2Fp%3E');
         } else { ?>
-        <p><strong class="green">root@<?php echo gethostbyaddr($_SERVER['REMOTE_ADDR']); ?>:/#</strong> cat /proc/owain/state</p>
+        <p><strong class="green">root@<?php
+        echo gethostbyaddr($_SERVER['REMOTE_ADDR']); ?>:/#</strong>
+        cat /proc/owain/state</p>
         <strong class="yellow">Mister Owain Daniel Jones</strong><br />
         Computer Scientist, Programmer Of Stuff<br />
         <div class='hr'></div>
@@ -30,11 +58,12 @@
         <a href="cv.pdf">pdf format</a><br />
         <div class='hr'></div>
         <strong class="blue">About Me:</strong>
-        <p>I am currently a student of Robotics &amp; Artificial Intelligence at<br />
-           <a href="//www.aber.ac.uk">Aberystwyth University</a>. My major interest is in Search And Rescue
-           Robotics. My plan is to develop novel ways for search and rescue
-           operations to use increasingly autonomous robots to provide them with
-           remote sensing information and possibly even aid with rescue.</p>
+        <p>I am currently a student of Robotics &amp; Artificial Intelligence
+           at<br /><a href="//www.aber.ac.uk">Aberystwyth University</a>. My
+           major interest is in Search And Rescue Robotics. My plan is to
+           develop novel ways for search and rescue operations to use
+           increasingly autonomous robots to provide them with remote sensing
+           information and possibly even aid with rescue.</p>
         <p>Outside of academia I enjoy taking pictures of things, saying words
            purely because they sound nice, hoarding many genres of music, and
            hedgehogs.</p>
