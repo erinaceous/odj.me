@@ -11,9 +11,9 @@
                 if(keycode === 17) { //ctrl
                     ctrl = true;
                 } else if(keycode === 67 && ctrl == true) { //c
-                    document.body.innerHTML += '^C ';
+                    document.body.innerHTML += '^C&#8203;';
                 } else if(keycode === 90 && ctrl == true) { //z
-                    document.body.innerHTML += '^Z ';
+                    document.body.innerHTML += '^Z&#8203;';
                 }
             }
             window.onload = function() {
