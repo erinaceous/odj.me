@@ -117,12 +117,12 @@ strong {
 }
 
 
-@media(max-width: 40em) {
+@media(max-width: 44em) {
     body {
         width: auto;
     }
     a{
-        font-size: 150%;
+        font-weight: bold;
     }
     a:before{
         content: '[- ';
