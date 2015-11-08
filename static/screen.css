@@ -10,7 +10,7 @@ body {
     font-family: "Fantasque Sans Mono", monospace;
     background: black;
     color: #ccc;
-    font-size: 12pt;
+    font-size: 14pt;
     margin: 1em auto;
     padding: 1em;
     width: 80ch;
@@ -24,7 +24,7 @@ body {
     min-height: 22em;
 }
 
-@media(max-width: 82ch) {
+@media(max-width: 90ch) {
     body {
         width: auto;
     }
