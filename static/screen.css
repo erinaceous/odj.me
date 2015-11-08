@@ -24,12 +24,6 @@ body {
     min-height: 22em;
 }
 
-@media(max-width: 90ch) {
-    body {
-        width: auto;
-    }
-}
-
 body:hover {
     border-color: #444;
 }
@@ -120,4 +114,20 @@ p {
 
 strong {
     font-weight: bold;
+}
+
+
+@media(max-width: 40em) {
+    body {
+        width: auto;
+    }
+    a{
+        font-size: 150%;
+    }
+    a:before{
+        content: '[- ';
+    }
+    a:after{
+        content: ' -]';
+    }
 }
