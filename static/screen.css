@@ -1,12 +1,13 @@
 @import url('reset.css');
-@import url('//fonts.googleapis.com/css?family=Source+Code+Pro:400,700');
+/*@import url('//fonts.googleapis.com/css?family=Source+Code+Pro:400,700');*/
+@import url('https://fontlibrary.org/face/fantasque-sans-mono');
 
 /*html {
     background: #111;
 }*/
 
 body {
-    font-family: "Source Code Pro", monospace;
+    font-family: "Fantasque Sans Mono", monospace;
     background: black;
     color: #ccc;
     font-size: 12pt;
@@ -22,6 +23,13 @@ body {
     box-shadow: 0px 0px 7px #000;*/
     min-height: 22em;
 }
+
+@media(max-width: 82ch) {
+    body {
+        width: auto;
+    }
+}
+
 body:hover {
     border-color: #444;
 }
@@ -101,6 +109,9 @@ a:hover {
     margin: 1em 0px;
     opacity: .5;
     content: '--------------------------------------------------------------------------------';
+    overflow: hidden;
+    max-width: 80ch;
+    white-space: nowrap;
 }
 
 p {
