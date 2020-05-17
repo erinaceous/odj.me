@@ -30,7 +30,8 @@ body:hover {
 body:after {
     content: '.';
     float: right;
-    margin-bottom: 1ch;
+    margin-bottom: 2ch;
+    margin-top: -4ch;
 }
 
 @keyframes blink {
@@ -109,7 +110,7 @@ a:hover {
 }
 
 p {
-    margin: 1ch 0px;
+    margin-bottom: 1ch;
 }
 
 strong {
@@ -118,13 +119,14 @@ strong {
 
 ul li:before {
     content: '* ';
+    margin-left: -2ch;
 }
 
 ul li {
-    margin: 1ch 1ch;
+    margin: 0px 0px 2ch 2ch;
 }
 
-@media(max-width: 44ch) {
+@media(max-width: 80ch) {
     body {
         width: auto;
     }
@@ -132,9 +134,9 @@ ul li {
         font-weight: bold;
     }
     a:before{
-        content: '[- ';
+        content: '[ ';
     }
     a:after{
-        content: ' -]';
+        content: ' ]';
     }
 }
