@@ -123,7 +123,15 @@ ul li:before {
 }
 
 ul li {
-    margin: 0px 0px 2ch 2ch;
+    margin-left: 2ch;
+}
+
+ul {
+    margin-bottom: 1ch;
+}
+
+ul.long li {
+    margin-bottom: 1ch;
 }
 
 @media(max-width: 80ch) {
