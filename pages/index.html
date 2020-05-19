@@ -1,39 +1,28 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Owain Daniel Jones</title>
-        <link rel="stylesheet" href="static/screen.css" media="screen" />
-        <script type="text/javascript">
-            var ctrl = false;
-            function keys(e) {
-                e = e || window.event;
-                var keycode = e.charCode || e.keyCode;
-                if(keycode === 17) { //ctrl
-                    ctrl = true;
-                } else if(keycode === 67 && ctrl == true) { //c
-                    document.body.innerHTML += '^C&#8203;';
-                } else if(keycode === 90 && ctrl == true) { //z
-                    document.body.innerHTML += '^Z&#8203;';
-                }
-            }
-            window.onload = function() {
-                document.body.onkeydown = keys;
-                document.body.onkeyup = function(e) {
-                    e = e || window.event;
-                    var keycode = e.charCode || e.keyCode;
-                    if(keycode === 17 && ctrl == true) {
-                        ctrl = false;
-                    }
-                }
-            }
-        </script>
-    </head>
-    <body>
-        <p><strong class="green">root@odj.me:/#</strong>
-        cat /proc/owain/state</p>
-        <strong class="yellow">Mister Owain Daniel Jones</strong><br />
-        Computer Scientist, Programmer Of Stuff
-        <div class='hr'></div>
+<title>Owain Daniel Jones</title>
+        <style type="text/css">
+body:after {
+    content: '.';
+    float: right;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.blink, body:after {
+    animation: blink 1s steps(60, start) infinite;
+}
+
+.cursor, body:after {
+    color: yellow;
+    background-color: yellow;
+}
+        </style>
         <strong class="orange">Contact:</strong>
         <ul>
             <li><a href="mailto:contact@odj.me">contact@odj.me</a></li>
@@ -43,6 +32,7 @@
         </ul>
         <strong class="red">My Blogs:</strong>
         <ul>
+            <li><a href="/blog">odj.me/blog</a> - This site</li>
             <li><a href="http://smokey.odj.me">smokey.odj.me</a> - Smokey the
         Quadcopter blog (MSc dissertation)</a></li>
             <li><a href="http://shadows.odj.me">shadows.odj.me</a> - my undergraduate
@@ -80,5 +70,28 @@
             <li>Newey, Charles C.; Jones, Owain D.; Dee, Hannah M.. 2018 Shadow detection for mobile robots: Features, evaluation, and datasets. Spatial Cognition &amp; Computation, 18 (2). 115-137. <a href="https://doi.org/10.1080/13875868.2017.1322088">https://doi.org/10.1080/13875868.2017.1322088</a></li>
             <li>Farley, Jack; Morris, Ashley W.; Jones, Owain D.; Harris, Catherine A.; Lorenzo Lopez, Alvaro. 2019 <a href="http://nora.nerc.ac.uk/id/eprint/526132/">Marine Science from an Armchair: A Unified Piloting Framework for Autonomous Marine Vehicles</a>. In: Oceans 2019, Marseille, France, 17-20 June 2019. 1-10.</li>
         </ul>
-    </body>
-</html>
+        <script type="text/javascript">
+            var ctrl = false;
+            function keys(e) {
+                e = e || window.event;
+                var keycode = e.charCode || e.keyCode;
+                if(keycode === 17) { //ctrl
+                    ctrl = true;
+                } else if(keycode === 67 && ctrl == true) { //c
+                    document.body.innerHTML += '^C&#8203;';
+                } else if(keycode === 90 && ctrl == true) { //z
+                    document.body.innerHTML += '^Z&#8203;';
+                }
+            }
+            window.onload = function() {
+                document.body.onkeydown = keys;
+                document.body.onkeyup = function(e) {
+                    e = e || window.event;
+                    var keycode = e.charCode || e.keyCode;
+                    if(keycode === 17 && ctrl == true) {
+                        ctrl = false;
+                    }
+                }
+            }
+        </script>
+
