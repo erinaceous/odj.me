@@ -1,27 +1,16 @@
 @import url('reset.css');
-/*@import url('//fonts.googleapis.com/css?family=Source+Code+Pro:400,700');*/
 @import url('https://fontlibrary.org/face/fantasque-sans-mono');
-
-/*html {
-    background: #111;
-}*/
 
 body {
     font-family: "Fantasque Sans Mono", monospace;
     background: black;
     color: #ccc;
     font-size: 14pt;
-    margin: 1ch auto;
-    padding: 1ch;
+    margin: 2ch auto;
+    padding: 2ch;
     width: 80ch;
-/*    border: 0.1ch solid #222;
-    line-height: 1.2ch;
-    -webkit-box-shadow: 0px 0px 7px #000;
-    -moz-box-shadow: 0px 0px 7px #000;
-    -ms-box-shadow: 0px 0px 7px #000;
-    -o-box-shadow: 0px 0px 7px #000;
-    box-shadow: 0px 0px 7px #000;*/
-    min-height: 22ch;
+    line-height: 2ch;
+    min-height: 48ch;
 }
 
 body:hover {
@@ -30,8 +19,6 @@ body:hover {
 body:after {
     content: '.';
     float: right;
-    margin-bottom: 2ch;
-    margin-top: -4ch;
 }
 
 @keyframes blink {
@@ -86,8 +73,6 @@ body:after {
 .cyan { color: #2AA198; }
 .green { color: #859900; }
 
-/*a:before { content: '\0000bb'; opacity: .5; }
-a:after { content: '\0000ab'; opacity: .5; }*/
 a:before { content: '['; opacity: .5; }
 a:after { content: ']'; opacity: .5; }
 a {
@@ -101,7 +86,7 @@ a:hover {
 .hr:before {
     display: block;
     clear: both;
-    margin: 1ch 0px;
+    margin: 2ch 0px;
     opacity: .5;
     content: '--------------------------------------------------------------------------------';
     overflow: hidden;
@@ -110,7 +95,7 @@ a:hover {
 }
 
 p {
-    margin-bottom: 1ch;
+    margin-bottom: 2ch;
 }
 
 strong {
@@ -127,14 +112,14 @@ ul li {
 }
 
 ul {
-    margin-bottom: 1ch;
+    margin-bottom: 2ch;
 }
 
 ul.long li {
-    margin-bottom: 1ch;
+    margin-bottom: 2ch;
 }
 
-@media(max-width: 80ch) {
+@media(max-width: 82ch) {
     body {
         width: auto;
     }

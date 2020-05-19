@@ -29,15 +29,7 @@
         </script>
     </head>
     <body>
-        <?php if($_SERVER['REQUEST_URI'] != '/') {
-            echo urldecode('%3Cstrong%20class%3D%22bg-15%20magenta%22%3ETODO' .
-                           '%3A%3C%2Fstrong%3E%20Write%20')
-                 . $_SERVER['REQUEST_URI']
-                 . urldecode('%3Cp%3E(HTTP%20404%2C%20File%20not%20found.' .
-                             '%20Sorry!)%3C%2Fp%3E');
-        } else { ?>
-        <p><strong class="green">root@<?php
-        echo gethostbyaddr($_SERVER['REMOTE_ADDR']); ?>:/#</strong>
+        <p><strong class="green">root@odj.me:/#</strong>
         cat /proc/owain/state</p>
         <strong class="yellow">Mister Owain Daniel Jones</strong><br />
         Computer Scientist, Programmer Of Stuff
@@ -84,10 +76,9 @@
         <div class='hr'></div>
         <strong class="cyan">Publications:</strong>
         <ul class="long">
-            <li>Dahl, Torbjorn & Gibbons, Peter & Jones, Owain. (2012). <a href="https://www.researchgate.net/publication/263877137_Identification_and_Production_of_Simple_Tactile_Gestures">Identification and Production of Simple Tactile Gestures</a>. 10.13140/2.1.3165.3441.</li>
-            <li>Newey, Charles C.; Jones, Owain D.; Dee, Hannah M.. 2018 Shadow detection for mobile robots: Features, evaluation, and datasets. Spatial Cognition & Computation, 18 (2). 115-137. <a href="https://doi.org/10.1080/13875868.2017.1322088">https://doi.org/10.1080/13875868.2017.1322088</a></li>
+            <li>Dahl, Torbjorn &amp; Gibbons, Peter &amp; Jones, Owain. (2012). <a href="https://www.researchgate.net/publication/263877137_Identification_and_Production_of_Simple_Tactile_Gestures">Identification and Production of Simple Tactile Gestures</a>. 10.13140/2.1.3165.3441.</li>
+            <li>Newey, Charles C.; Jones, Owain D.; Dee, Hannah M.. 2018 Shadow detection for mobile robots: Features, evaluation, and datasets. Spatial Cognition &amp; Computation, 18 (2). 115-137. <a href="https://doi.org/10.1080/13875868.2017.1322088">https://doi.org/10.1080/13875868.2017.1322088</a></li>
             <li>Farley, Jack; Morris, Ashley W.; Jones, Owain D.; Harris, Catherine A.; Lorenzo Lopez, Alvaro. 2019 <a href="http://nora.nerc.ac.uk/id/eprint/526132/">Marine Science from an Armchair: A Unified Piloting Framework for Autonomous Marine Vehicles</a>. In: Oceans 2019, Marseille, France, 17-20 June 2019. 1-10.</li>
         </ul>
-        <?php } ?>
     </body>
 </html>
