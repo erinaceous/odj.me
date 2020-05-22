@@ -94,3 +94,13 @@ ul.long li {
     }
 }
 
+.me {
+    float: right;
+    max-height: 24ch;
+    margin: 2ch 0px 2ch 2ch;
+    image-rendering: crisp-edges;
+}
+.me-small {
+    max-height: 8ch;
+    margin: 0px 0px 0px 2ch;
+}

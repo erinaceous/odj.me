@@ -2,6 +2,9 @@
 
 cd `dirname $0`
 
+# Clear out build
+rm -vrf www
+
 # Copy static files
 mkdir -p www
 cp -vrf ./static www/static
