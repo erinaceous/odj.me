@@ -1,4 +1,5 @@
 #!/bin/bash
+set -x
 
 cd `dirname $0`
 
@@ -27,12 +28,18 @@ done
 mkdir -p www/blog
 cat components/header.html > www/blog/index.html
 cat components/blog-header.html >> www/blog/index.html
-echo "<strong class=\"red\">Articles</strong><br />" >> www/blog/index.html
-echo "<ul>" >> www/blog/index.html
-find pages/blog/ -name '*.html' | sort -hr | while read page; do
+page=$(find pages/blog/ -name '*.html' | sort -hr | head -n1)
+if [[ "$page" != "" ]]; then
     base=`basename $page .html`
-    echo "<li><a href=\"/blog/${base}\">${base}</a></li>" >> www/blog/index.html
-done
-echo "</ul>" >> www/blog/index.html
+    awk '/<!--summary-->/,/<!--\/summary-->/' $page >> www/blog/index.html
+    echo "<p><a href=\"/blog/${base}\">Read more...</a></p>" >> www/blog/index.html
+    echo "<div class=\"hr\"></div><strong class=\"magenta\">Articles</strong><br />" >> www/blog/index.html
+    echo "<ul>" >> www/blog/index.html
+    find pages/blog/ -name '*.html' | sort -hr | while read page; do
+        base=`basename $page .html`
+        echo "<li><a href=\"/blog/${base}\">${base}</a></li>" >> www/blog/index.html
+    done
+    echo "</ul>" >> www/blog/index.html
+fi
 cat components/blog-footer.html >> www/blog/index.html
 cat components/footer.html >> www/blog/index.html
