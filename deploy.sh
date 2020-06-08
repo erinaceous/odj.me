@@ -3,6 +3,6 @@
 cd `dirname $0`
 git pull
 ./gen.sh
-sudo rm -vrf /var/www/odj.me
-sudo cp www -vrf /var/www/odj.me
+sudo mkdir -p /var/www/html/
+sudo cp www/* -vrf /var/www/html/
 ./purge-cache.sh
