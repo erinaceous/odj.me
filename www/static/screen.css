@@ -13,6 +13,10 @@ body {
     min-height: 48ch;
 }
 
+em {
+    font-style: italic;
+}
+
 /* Solarized colours :D */
 .bg-15 { background-color: #002B36; }
 .bg-20 { background-color: #073642; }
