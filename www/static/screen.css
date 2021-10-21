@@ -8,8 +8,8 @@ body {
     font-size: 14pt;
     margin: 2ch auto;
     padding: 2ch;
-    width: 80ch;
-    line-height: 2.5ch;
+    width: 72ch;
+    line-height: 3ch;
     min-height: 48ch;
 }
 
@@ -37,9 +37,13 @@ em {
 
 a:before { content: '['; opacity: .5; }
 a:after { content: ']'; opacity: .5; }
+
+
+
 a {
     text-decoration: none;
     color: inherit;
+    font-weight: bold;
 }
 a:hover {
     color: #fff;
@@ -83,18 +87,9 @@ ul.long li {
     margin-bottom: 2ch;
 }
 
-@media(max-width: 82ch) {
+@media(max-width: 74ch) {
     body {
         width: auto;
-    }
-    a{
-        font-weight: bold;
-    }
-    a:before{
-        content: '[ ';
-    }
-    a:after{
-        content: ' ]';
     }
 }
 
