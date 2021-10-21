@@ -87,15 +87,10 @@ ul.long li {
     margin-bottom: 2ch;
 }
 
-@media(max-width: 74ch) {
-    body {
-        width: auto;
-    }
-}
-
 .me {
     float: right;
     max-height: 24ch;
+    max-width: 44vw;
     margin: 2ch 0px 2ch 2ch;
     image-rendering: crisp-edges;
 }
@@ -103,3 +98,10 @@ ul.long li {
     max-height: 8ch;
     margin: 0px 0px 0px 2ch;
 }
+
+@media(max-width: 74ch) {
+    body {
+        width: auto;
+    }
+}
+
