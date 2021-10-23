@@ -8,7 +8,7 @@ body {
     font-size: 14pt;
     margin: 2ch auto;
     padding: 2ch;
-    width: 72ch;
+    width: 60ch;
     line-height: 3ch;
     min-height: 48ch;
 }
@@ -67,7 +67,7 @@ a.no-decoration:after { content: none; }
     opacity: .5;
     content: '--------------------------------------------------------------------------------';
     overflow: hidden;
-    max-width: 80ch;
+    max-width: 60ch;
     white-space: nowrap;
 }
 
@@ -108,7 +108,7 @@ ul.long li {
     margin: 0px 0px 0px 2ch;
 }
 
-@media(max-width: 74ch) {
+@media(max-width: 80ch) {
     body {
         width: auto;
     }
