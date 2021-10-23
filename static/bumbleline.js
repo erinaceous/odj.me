@@ -72,7 +72,7 @@ function bumbleline (root, z, min_z, max_z, z_step, replace_color) {
 
 document.addEventListener('DOMContentLoaded', function(event) {
 	var root = document.getElementById('article');
-	var z_step = -2;
+	var z_step = -4;
 	var min_z = 160;
 	var max_z = 240;
 	var z = max_z;
