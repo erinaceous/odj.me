@@ -13,6 +13,11 @@ body {
     min-height: 48ch;
 }
 
+body.bright {
+    background: #fdf6e3;
+    color: #666;
+}
+
 h6, h5, h4, h3, h2, h1 { line-height: 3ch; }
 
 h6 { font-size: 110%; }
@@ -59,6 +64,10 @@ a:hover {
 }
 a.no-decoration:before { content: none; }
 a.no-decoration:after { content: none; }
+
+body.bright a:hover {
+    color: #333;
+}
 
 .hr:before {
     display: block;

@@ -7,7 +7,7 @@ function _bumbleline(root, z, min_z, max_z, z_step, replace_color) {
 	}
 	for(var n=0; n<childNodes.length; n++) {
 		var node = childNodes[n];
-		if(['TITLE', 'SCRIPT', 'IMG'].indexOf(node.nodeName) > -1) {
+		if(['TITLE', 'SCRIPT', 'STYLE', 'IMG'].indexOf(node.nodeName) > -1) {
 			continue;
 		}
 		if(['DIV', 'P', 'UL', 'LI'].indexOf(node.nodeName) > -1) {
@@ -70,12 +70,37 @@ function bumbleline (root, z, min_z, max_z, z_step, replace_color) {
 	root.classList.add('beeline');
 }
 
-document.addEventListener('DOMContentLoaded', function(event) {
+function update_style () {
 	var root = document.getElementById('article');
 	var z_step = -4;
 	var min_z = 160;
 	var max_z = 240;
 	var z = max_z;
-	var replace_color = 'rgb(204, 204, 204)';
+	var replace_color_dark = 'rgb(204, 204, 204)';
+	var replace_color_bright = 'rgb(102, 102, 102)';
+	var replace_color = replace_color_dark;
+	if(document.body.classList.contains('bright')) {
+		z_step = 6;
+		max_z = 122;
+		min_z = 2;
+		z = min_z;
+		replace_color = replace_color_bright;
+	}
+	if(root.originalHTML) {
+		root.innerHTML = root.originalHTML;
+	}
 	bumbleline(root, z, min_z, max_z, z_step, replace_color);
+}
+
+function toggle_bright_mode () {
+	if(document.body.classList.contains('bright')) {
+		document.body.classList.remove('bright');
+	} else {
+		document.body.classList.add('bright');
+	}
+	update_style();
+}
+
+document.addEventListener('DOMContentLoaded', function(event) {
+	update_style();
 });
