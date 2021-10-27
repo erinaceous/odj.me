@@ -52,8 +52,6 @@ em {
 a:before { content: '['; opacity: .5; }
 a:after { content: ']'; opacity: .5; }
 
-
-
 a {
     text-decoration: none;
     color: inherit;
@@ -80,7 +78,7 @@ body.bright a:hover {
     white-space: nowrap;
 }
 
-p {
+p, ul, ol, ul.long li, ol.long li {
     margin-bottom: 2ch;
 }
 
@@ -93,16 +91,13 @@ ul li:before {
     margin-left: -2ch;
 }
 
-ul li {
+ul li, ol li {
     margin-left: 2ch;
 }
 
-ul {
-    margin-bottom: 2ch;
-}
-
-ul.long li {
-    margin-bottom: 2ch;
+ol {
+    margin-left: 1ch;
+    list-style: decimal;
 }
 
 .me {
