@@ -18,7 +18,7 @@ body.bright {
     color: #666;
 }
 
-h6, h5, h4, h3, h2, h1 { line-height: 3ch; }
+h6, h5, h4, h3, h2, h1 { line-height: 3ch; clear: both; }
 
 h6 { font-size: 110%; }
 h5 { font-size: 120%; }
@@ -29,6 +29,15 @@ h1 { font-size: 250%; }
 
 em {
     font-style: italic;
+}
+
+.sidenote {
+    position: relative;
+    margin-right: -36ch;
+    float: right;
+    opacity: .75;
+    font-style: italic;
+    max-width: 30ch;
 }
 
 /* Solarized colours :D */
@@ -86,6 +95,10 @@ strong {
     font-weight: bold;
 }
 
+u {
+    text-decoration: underline;
+}
+
 ul li:before {
     content: '* ';
     margin-left: -2ch;
@@ -118,3 +131,10 @@ ol {
     }
 }
 
+@media(max-width: 130ch) {
+    .sidenote {
+        float: unset;
+        max-width: unset;
+        margin-right: unset;
+    }
+}
